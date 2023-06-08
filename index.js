@@ -166,7 +166,7 @@ const specs = swaggerJsdoc(options)
 
 // Frontend
 app.get("/", (req, res) => {
-  fs.readFile("./views/index.ejs", "utf8", (err, data) => {
+  fs.readFile("views/index.ejs", "utf8", (err, data) => {
     if (err) {
       console.error(err)
       return res.status(500).send("Error")
