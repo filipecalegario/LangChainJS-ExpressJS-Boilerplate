@@ -21,14 +21,14 @@ const port = process.env.PORT || 3000
 app.use(bodyParser.json())
 app.use(cors())
 
-const logsDir = path.join(process.cwd(), "logs")
-if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir)
-}
+// const logsDir = path.join(process.cwd(), "logs")
+// if (!fs.existsSync(logsDir)) {
+//   fs.mkdirSync(logsDir)
+// }
 
-const logStream = fs.createWriteStream(path.join(logsDir, "access.log"), {
-  flags: "a",
-})
+// const logStream = fs.createWriteStream(path.join(logsDir, "access.log"), {
+//   flags: "a",
+// })
 
 app.use(morgan("combined", { stream: logStream }))
 // Set up rate limiting
