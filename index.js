@@ -30,7 +30,7 @@ app.use(cors())
 //   flags: "a",
 // })
 
-app.use(morgan("combined", { stream: logStream }))
+//app.use(morgan("combined", { stream: logStream }))
 // Set up rate limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
